@@ -1,2 +1,24 @@
-<h1>Welcome to Blocmetrics</h1>
-<p>This is an analytics application</p>
+<br>
+<div class="jumbotron">
+  <h1>Blocmetrics</h1>
+  <p>Blocmetrics is an analytics app</p>
+  <p>
+      <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+      <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Yes, we are analyzing data about you</h2>
+    <p>There's no getting around it, you're right, it is a little bit creepy.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Are analytics making us more boring?</h2>
+    <p>Well, that depends on what you do with the data. If you use it to help make more intelligent decisions, you'll be ok. If you use it to make decisions full stop, that's on you.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>What do you know about me?</h2>
+    <p>A lot less than you have willfully volunteered across a range of social media apps, streaming services and search engines.</p>
+  </div>
+</div>
