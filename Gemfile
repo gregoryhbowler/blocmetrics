@@ -25,9 +25,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
 gem 'figaro', '1.0'
 gem 'bootstrap-sass'
+gem 'faker'
+gem 'bootswatch-rails'
 
 group :production do
   gem 'pg'
@@ -60,4 +61,5 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'annotate'
 end

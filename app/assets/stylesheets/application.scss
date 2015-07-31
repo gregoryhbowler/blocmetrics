@@ -13,13 +13,30 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+ // @import "bootstrap-sprockets";
+ // @import "bootstrap";
+ //
+ // .user-info {
+ //   margin-top: 9px;
+ // }
+ //
+ // .nav {
+ //   margin-top: 5px;
+ // }
 
- .user-info {
-   margin-top: 9px;
- }
+ // Example using 'Paper' bootswatch
 
- .nav {
-   margin-top: 5px;
- }
+//Import bootstrap-sprockets
+@import "bootstrap-sprockets";
+
+// Import cerulean variables
+@import "bootswatch/cosmo/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 10px; }
+
+// And finally bootswatch style itself
+@import "bootswatch/cosmo/bootswatch";

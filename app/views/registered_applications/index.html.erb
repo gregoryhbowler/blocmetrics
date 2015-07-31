@@ -1,0 +1,27 @@
+<div class="row">
+  <h2>Applications you're tracking</h2>
+  <div class= "col-md-8">
+    <table class="table table-striped table-hover">
+      <tbody>
+      <thead>
+        <tr>
+          <th>Application Name</th>
+          <th>URL</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+        <% @registered_applications.each do |registered_application| %>
+        <tr>
+          <td><%= link_to registered_application.name, registered_application %></td>
+          <td><%= link_to registered_application.url, registered_application.url %></td>
+          <td>
+            <%= link_to "Edit", edit_registered_application_path(registered_application), class: 'btn btn-success' %>
+            <%= link_to "Delete", registered_application_path(registered_application), method: :delete, data: {confirm: "Are you you sure you want to delete this application?"}, class: 'btn btn-danger' %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+      <%= link_to "Track a new application", new_registered_application_path, class: 'btn btn-success' %>
+  </div>
+</div>

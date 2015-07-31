@@ -1,0 +1,17 @@
+<div class="well well-sm">
+    <h3><%= @registered_application.name %></h3>
+    <h4><%= link_to @registered_application.url, @registered_application.url %></h4>
+</div>
+<h4> Application Events </h4>
+<div class = "row">
+
+  <% @events.each do |event, name| %>
+    <%= event %>
+    <%= name.count %>
+    <hr>
+  <% end %>
+</div><br>
+
+<div class= "row">
+  <%= link_to "Registered Applications", registered_applications_path, class: 'btn btn-success' %>
+</div>
