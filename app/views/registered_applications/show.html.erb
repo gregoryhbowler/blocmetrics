@@ -1,3 +1,5 @@
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
 <div class="well well-sm">
     <h3><%= @registered_application.name %></h3>
     <h4><%= link_to @registered_application.url, @registered_application.url %></h4>
@@ -7,7 +9,8 @@
 
   <% @events.each do |event, name| %>
     <%= event %>
-    <%= name.count %>
+    <%= pie_chart @registered_application.events.group(:name).count %>
+    <%= line_chart @registered_application.events.group_by_day(:created_at).count %>
     <hr>
   <% end %>
 </div><br>

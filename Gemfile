@@ -41,6 +41,10 @@ end
 
 gem 'devise'
 
+gem 'chartkick'
+
+gem 'dateslices'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
