@@ -63,3 +63,5 @@ group :development, :test do
   gem 'spring'
   gem 'annotate'
 end
+
+# gem 'rack-cors', :require => 'rack/cors'

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :registered_applications
 
   # #1
-    namespace :api, defaults: { format: :json } do
+  namespace :api, defaults: { format: :json } do
   # #2
     match 'create_event', to: 'events#create', via: [:options]
     resources :events, only: [:create]
