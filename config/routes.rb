@@ -1,25 +1,13 @@
 Rails.application.routes.draw do
 
   resources :registered_applications
-  # get 'registered_applications/create'
-  #
-  # get 'registered_applications/read'
-  #
-  # get 'registered_applications/update'
-  #
-  # get 'registered_applications/destroy'
-  #
-  # get 'registered_applications/index'
-  #
-  # get 'registered_applications/show'
-  #
-  # get 'registered_applications/create'
-  #
-  # get 'registered_applications/update'
-  #
-  # get 'registered_applications/destroy'
-  #
-  # get 'registered_applications/show'
+
+  # #1
+    namespace :api, defaults: { format: :json } do
+  # #2
+    match 'create_event', to: 'events#create', via: [:options]
+    resources :events, only: [:create]
+  end
 
   devise_for :users
   get 'welcome/index'
