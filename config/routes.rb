@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # #1
   namespace :api, defaults: { format: :json } do
   # #2
-    match 'create_event', to: 'events#create', via: [:options]
+    match 'events', to: 'events#create', via: [:options]
     resources :events, only: [:create]
   end
 
